@@ -1,0 +1,77 @@
+package DTO;
+
+public class QuimicosDTO{
+    private Integer id ; 
+    private String nome ; 
+    private String marca ; 
+    private String volume ; 
+    private Integer quantidade; 
+    private String orgao_fiscalizador ; 
+    private Integer ano_validade ; 
+    private Integer mes_validade; 
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getVolume() {
+        return volume;
+    }
+
+    public void setVolume(String volume) {
+        this.volume = volume;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public String getOrgao_fiscalizador() {
+        return orgao_fiscalizador;
+    }
+
+    public void setOrgao_fiscalizador(String orgao_fiscalizador) {
+        this.orgao_fiscalizador = orgao_fiscalizador;
+    }
+
+    public Integer getAno_validade() {
+        return ano_validade;
+    }
+
+    public void setAno_validade(Integer ano_validade) {
+        this.ano_validade = ano_validade;
+    }
+
+    public Integer getMes_validade() {
+        return mes_validade;
+    }
+
+    public void setMes_validade(Integer mes_validade) {
+        this.mes_validade = mes_validade;
+    }
+    
+}
