@@ -1,0 +1,35 @@
+package DAO;
+import DTO.QuimicosDTO; 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
+public class QuimicosDAO {
+    Connection conn ;
+    PreparedStatement pstm ; 
+    public void cadastrar_usuario(QuimicosDTO objFunc) throws SQLException{
+        String sql = "insert into tb_quimicos(nome, marca, volume, quantidade,orgao_fiscalizador,ano_validade,mes_validade) values (?,?,?,?,?,?,?)" ; 
+        
+        conn = new conexaoDAO().conectaDB();
+        try{
+            pstm = conn.prepareStatement(sql) ; 
+            
+            pstm.setString(1,objFunc.getNome());
+            pstm.setString(2,objFunc.getMarca());
+            pstm.setString(3,objFunc.getVolume());
+            pstm.setInt(4,objFunc.getQuantidade());
+            pstm.setString(5,objFunc.getOrgao_fiscalizador());
+            pstm.setInt(6,objFunc.getAno_validade()) ; 
+            pstm.setInt(7,objFunc.getMes_validade());
+            
+            pstm.execute() ; 
+            pstm.close();
+            
+        
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        
+        }
+    }
+}
